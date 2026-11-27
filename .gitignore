@@ -1,0 +1,4 @@
+# Cache & hasil build Godot (dibuat otomatis)
+.godot/
+*.translation
+export_presets.cfg.bak
