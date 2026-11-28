@@ -134,9 +134,9 @@ Semua logika permainan berjalan dari `GameLoop._physics_process` pada 60 Hz:
 if not State.in_game: return
 if State.level == "dalang": DalangFlow.run_dalang()
 else match State.game_state:
-    "playing":   GameLoop.run_game()          # TestBot.tick() bila penonton, lalu GameLoop.update_game()
-    "hardIntro": HardIntro.run_hard_intro()
-    "ending":    GameFlow.run_ending_animation()
+	"playing":   GameLoop.run_game()          # TestBot.tick() bila penonton, lalu GameLoop.update_game()
+	"hardIntro": HardIntro.run_hard_intro()
+	"ending":    GameFlow.run_ending_animation()
 ```
 
 Di luar loop itu:
@@ -157,7 +157,7 @@ Proyek punya tiga scene. Semua UI permainan dibangun dengan kode, sehingga scene
 ```
 Game     (Control penuh; script game_root.gd)
 └── Board  (Panel 800×600 di tengah; clip_contents; mouse_filter abaikan)
-    └── Arena  (Node2D; script arena.gd)
+	└── Arena  (Node2D; script arena.gd)
 ```
 
 HUD, overlay, layar akhir, dan panel DALANG dibuat oleh `GameUI.build` di dalam `Board`. Latar dan bingkai papan dipasang oleh `GameUI.build_stage(self, board)`.
