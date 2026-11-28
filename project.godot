@@ -1,0 +1,72 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Killer & Gadfly"
+config/description="Game arena bertahan hidup 800×600: kumpulkan target, hindari Gadfly, Killer, Archer, meteor, dan Lord Vindex."
+run/main_scene="res://scenes/menu/menu.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Config="*res://scripts/core/config.gd"
+State="*res://scripts/core/state.gd"
+Util="*res://scripts/core/util.gd"
+DrawKit="*res://scripts/render/draw_kit.gd"
+PhotoKit="*res://scripts/render/photo_kit.gd"
+GameAudio="*res://scripts/systems/audio.gd"
+TimeStop="*res://scripts/systems/time_stop.gd"
+Particles="*res://scripts/systems/particles.gd"
+Story="*res://scripts/systems/story.gd"
+Hud="*res://scripts/systems/hud.gd"
+HardSubtitle="*res://scripts/systems/subtitle.gd"
+GameMenuButton="*res://scripts/systems/menu_button.gd"
+Sprites="*res://scripts/render/sprites.gd"
+Effects="*res://scripts/render/effects.gd"
+Background="*res://scripts/render/background.gd"
+DrawGame="*res://scripts/render/draw_game.gd"
+Player="*res://scripts/entities/player.gd"
+Items="*res://scripts/entities/items.gd"
+Killers="*res://scripts/entities/killers.gd"
+Gadflies="*res://scripts/entities/gadflies.gd"
+Archers="*res://scripts/entities/archers.gd"
+Meteors="*res://scripts/entities/meteors.gd"
+LordVindex="*res://scripts/entities/lord_vindex.gd"
+VindexAttacks="*res://scripts/modes/hard/vindex_attacks.gd"
+HardIntro="*res://scripts/modes/hard/hard_intro.gd"
+HardSequence="*res://scripts/modes/hard/hard_sequence.gd"
+GameSetup="*res://scripts/game/setup.gd"
+GameLoop="*res://scripts/game/loop.gd"
+GameFlow="*res://scripts/game/flow.gd"
+GameInput="*res://scripts/game/input.gd"
+GameUI="*res://scripts/ui/game_ui.gd"
+UiKit="*res://scripts/ui/ui_kit.gd"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=900
+window/size/mode=2
+window/size/window_width_override=1200
+window/size/window_height_override=900
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
